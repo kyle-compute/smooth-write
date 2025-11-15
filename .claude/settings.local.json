@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(find:*)",
+      "Bash(source .venv/bin/activate)",
+      "Bash(python:*)",
+      "Bash(sort:*)",
+      "WebSearch",
+      "WebFetch(domain:doc.qt.io)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

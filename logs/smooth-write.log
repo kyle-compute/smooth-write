@@ -1,0 +1,178 @@
+2025-11-14 22:00:45,550 - __main__ - INFO - Logging initialized
+2025-11-14 22:00:45,550 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-14 22:00:45,742 - __main__ - INFO - Application configured
+2025-11-14 22:00:45,743 - src.core.storage - INFO - Storage directory initialized at /home/kyle/Desktop/smooth-write/notes
+2025-11-14 22:00:45,849 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-14 22:00:45,858 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-14 22:00:45,898 - src.app - INFO - Keyboard shortcuts configured
+2025-11-14 22:00:45,899 - src.core.storage - INFO - Loaded 0 notes
+2025-11-14 22:00:45,900 - src.app - INFO - Created welcome note
+2025-11-14 22:00:45,901 - src.core.storage - INFO - Loaded 1 notes
+2025-11-14 22:00:45,902 - src.ui.notes_list - INFO - Notes list updated with 1 notes
+2025-11-14 22:00:45,910 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:00:45,912 - src.app - INFO - Loaded note: 82ddf357-411a-44a7-91fe-55ad211c1beb
+2025-11-14 22:00:45,912 - src.app - INFO - Loaded 1 notes
+2025-11-14 22:00:45,912 - src.app - INFO - Main window initialized
+2025-11-14 22:00:45,930 - __main__ - INFO - Application started successfully
+2025-11-14 22:00:50,404 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:00:50,404 - src.app - INFO - Loaded note: 82ddf357-411a-44a7-91fe-55ad211c1beb
+2025-11-14 22:00:52,841 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:00:52,842 - src.app - INFO - Loaded note: e8a5386d-9ab7-4aa3-b35b-6028478cc9e7
+2025-11-14 22:00:52,842 - src.app - INFO - Created new note: e8a5386d-9ab7-4aa3-b35b-6028478cc9e7
+2025-11-14 22:01:01,450 - src.app - INFO - Application closing
+2025-11-14 22:16:30,015 - __main__ - INFO - Logging initialized
+2025-11-14 22:16:30,016 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-14 22:16:30,238 - __main__ - INFO - Application configured
+2025-11-14 22:16:30,241 - src.core.storage - INFO - Storage directory initialized at /home/kyle/Desktop/smooth-write/notes
+2025-11-14 22:16:30,360 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-14 22:16:30,367 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-14 22:16:30,412 - src.app - INFO - Keyboard shortcuts configured
+2025-11-14 22:16:30,413 - src.core.storage - INFO - Loaded 2 notes
+2025-11-14 22:16:30,415 - src.ui.notes_list - INFO - Notes list updated with 2 notes
+2025-11-14 22:16:30,418 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:16:30,419 - src.app - INFO - Loaded note: e8a5386d-9ab7-4aa3-b35b-6028478cc9e7
+2025-11-14 22:16:30,419 - src.app - INFO - Loaded 2 notes
+2025-11-14 22:16:30,419 - src.app - INFO - Main window initialized
+2025-11-14 22:16:30,435 - __main__ - INFO - Application started successfully
+2025-11-14 22:16:37,412 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:16:37,412 - src.app - INFO - Loaded note: 82ddf357-411a-44a7-91fe-55ad211c1beb
+2025-11-14 22:22:21,735 - __main__ - INFO - Logging initialized
+2025-11-14 22:22:21,735 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-14 22:22:21,927 - __main__ - INFO - Application configured
+2025-11-14 22:22:21,929 - src.core.storage - INFO - Storage directory initialized at /home/kyle/Desktop/smooth-write/notes
+2025-11-14 22:22:22,026 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-14 22:22:22,031 - __main__ - ERROR - Fatal error: name 'Qt' is not defined
+Traceback (most recent call last):
+  File "/home/kyle/Desktop/smooth-write/src/main.py", line 92, in main
+    window = MainWindow()
+             ^^^^^^^^^^^^
+  File "/home/kyle/Desktop/smooth-write/src/app.py", line 43, in __init__
+    self._setup_ui()
+  File "/home/kyle/Desktop/smooth-write/src/app.py", line 79, in _setup_ui
+    self._editor = RichTextEditor()
+                   ^^^^^^^^^^^^^^^^
+  File "/home/kyle/Desktop/smooth-write/src/ui/editor.py", line 31, in __init__
+    self._setup_ui()
+  File "/home/kyle/Desktop/smooth-write/src/ui/editor.py", line 47, in _setup_ui
+    self._editor.setAttribute(Qt.WidgetAttribute.WA_OpaquePaintEvent, False)
+                              ^^
+NameError: name 'Qt' is not defined
+2025-11-14 22:23:18,805 - __main__ - INFO - Logging initialized
+2025-11-14 22:23:18,805 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-14 22:23:18,999 - __main__ - INFO - Application configured
+2025-11-14 22:23:19,001 - src.core.storage - INFO - Storage directory initialized at /home/kyle/Desktop/smooth-write/notes
+2025-11-14 22:23:19,099 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-14 22:23:19,105 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-14 22:23:19,144 - src.app - INFO - Keyboard shortcuts configured
+2025-11-14 22:23:19,146 - src.core.storage - INFO - Loaded 2 notes
+2025-11-14 22:23:19,147 - src.ui.notes_list - INFO - Notes list updated with 2 notes
+2025-11-14 22:23:19,149 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:23:19,149 - src.app - INFO - Loaded note: e8a5386d-9ab7-4aa3-b35b-6028478cc9e7
+2025-11-14 22:23:19,149 - src.app - INFO - Loaded 2 notes
+2025-11-14 22:23:19,149 - src.app - INFO - Main window initialized
+2025-11-14 22:23:19,164 - __main__ - INFO - Application started successfully
+2025-11-14 22:24:12,342 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:24:12,343 - src.app - INFO - Loaded note: 82ddf357-411a-44a7-91fe-55ad211c1beb
+2025-11-14 22:24:13,416 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:24:13,416 - src.app - INFO - Loaded note: bc8ca440-5044-4e84-89aa-9bfa589c82e5
+2025-11-14 22:24:13,416 - src.app - INFO - Created new note: bc8ca440-5044-4e84-89aa-9bfa589c82e5
+2025-11-14 22:24:16,021 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:24:16,022 - src.app - INFO - Loaded note: e8a5386d-9ab7-4aa3-b35b-6028478cc9e7
+2025-11-14 22:24:16,814 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:24:16,814 - src.app - INFO - Loaded note: 82ddf357-411a-44a7-91fe-55ad211c1beb
+2025-11-14 22:24:17,435 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:24:17,436 - src.app - INFO - Loaded note: bc8ca440-5044-4e84-89aa-9bfa589c82e5
+2025-11-14 22:24:20,318 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:24:20,319 - src.app - INFO - Loaded note: e8a5386d-9ab7-4aa3-b35b-6028478cc9e7
+2025-11-14 22:24:21,103 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:24:21,103 - src.app - INFO - Loaded note: bc8ca440-5044-4e84-89aa-9bfa589c82e5
+2025-11-14 22:24:24,447 - src.app - INFO - Application closing
+2025-11-14 22:35:10,715 - __main__ - INFO - Logging initialized
+2025-11-14 22:35:10,716 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-14 22:35:10,749 - __main__ - ERROR - Fatal error: type object 'ApplicationAttribute' has no attribute 'AA_UseHighDpiPixmaps'
+Traceback (most recent call last):
+  File "/home/kyle/Desktop/smooth-write/src/main.py", line 93, in main
+    app = setup_application()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/kyle/Desktop/smooth-write/src/main.py", line 45, in setup_application
+    QApplication.setAttribute(Qt.ApplicationAttribute.AA_UseHighDpiPixmaps)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ApplicationAttribute' has no attribute 'AA_UseHighDpiPixmaps'
+2025-11-14 22:36:39,398 - __main__ - INFO - Logging initialized
+2025-11-14 22:36:39,398 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-14 22:36:39,435 - __main__ - ERROR - Fatal error: type object 'ApplicationAttribute' has no attribute 'AA_UseHighDpiPixmaps'
+Traceback (most recent call last):
+  File "/home/kyle/Desktop/smooth-write/src/main.py", line 93, in main
+    app = setup_application()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/kyle/Desktop/smooth-write/src/main.py", line 45, in setup_application
+    QApplication.setAttribute(Qt.ApplicationAttribute.AA_UseHighDpiPixmaps)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ApplicationAttribute' has no attribute 'AA_UseHighDpiPixmaps'
+2025-11-14 22:38:00,415 - __main__ - INFO - Logging initialized
+2025-11-14 22:38:00,415 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-14 22:38:00,606 - __main__ - INFO - Application configured
+2025-11-14 22:38:00,608 - src.core.storage - INFO - Storage directory initialized at /home/kyle/Desktop/smooth-write/notes
+2025-11-14 22:38:00,705 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-14 22:38:00,711 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-14 22:38:00,751 - src.app - INFO - Keyboard shortcuts configured
+2025-11-14 22:38:00,752 - src.core.storage - INFO - Loaded 3 notes
+2025-11-14 22:38:00,754 - src.ui.notes_list - INFO - Notes list updated with 3 notes
+2025-11-14 22:38:00,755 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:38:00,755 - src.app - INFO - Loaded note: bc8ca440-5044-4e84-89aa-9bfa589c82e5
+2025-11-14 22:38:00,755 - src.app - INFO - Loaded 3 notes
+2025-11-14 22:38:00,755 - src.app - INFO - Main window initialized
+2025-11-14 22:38:00,769 - __main__ - INFO - Application started successfully
+2025-11-14 22:38:09,377 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:38:09,378 - src.app - INFO - Loaded note: e8a5386d-9ab7-4aa3-b35b-6028478cc9e7
+2025-11-14 22:38:10,043 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:38:10,043 - src.app - INFO - Loaded note: e8a5386d-9ab7-4aa3-b35b-6028478cc9e7
+2025-11-14 22:43:31,966 - src.app - INFO - Application closing
+2025-11-14 22:46:53,773 - __main__ - INFO - Logging initialized
+2025-11-14 22:46:53,773 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-14 22:46:54,010 - __main__ - INFO - Application configured
+2025-11-14 22:46:54,011 - src.core.storage - INFO - Storage directory initialized at /home/kyle/Desktop/smooth-write/notes
+2025-11-14 22:46:54,121 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-14 22:46:54,184 - src.ui.editor - INFO - OpenGL viewport enabled for smooth rendering
+2025-11-14 22:46:54,186 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-14 22:46:54,230 - src.app - INFO - Keyboard shortcuts configured
+2025-11-14 22:46:54,232 - src.core.storage - INFO - Loaded 3 notes
+2025-11-14 22:46:54,234 - src.ui.notes_list - INFO - Notes list updated with 3 notes
+2025-11-14 22:46:54,235 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:46:54,235 - src.app - INFO - Loaded note: e8a5386d-9ab7-4aa3-b35b-6028478cc9e7
+2025-11-14 22:46:54,235 - src.app - INFO - Loaded 3 notes
+2025-11-14 22:46:54,236 - src.app - INFO - Main window initialized
+2025-11-14 22:46:58,633 - __main__ - INFO - Logging initialized
+2025-11-14 22:46:58,633 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-14 22:46:58,838 - __main__ - INFO - Application configured
+2025-11-14 22:46:58,840 - src.core.storage - INFO - Storage directory initialized at /home/kyle/Desktop/smooth-write/notes
+2025-11-14 22:46:58,947 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-14 22:46:59,002 - src.ui.editor - INFO - OpenGL viewport enabled for smooth rendering
+2025-11-14 22:46:59,004 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-14 22:46:59,048 - src.app - INFO - Keyboard shortcuts configured
+2025-11-14 22:46:59,049 - src.core.storage - INFO - Loaded 3 notes
+2025-11-14 22:46:59,052 - src.ui.notes_list - INFO - Notes list updated with 3 notes
+2025-11-14 22:46:59,053 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:46:59,053 - src.app - INFO - Loaded note: e8a5386d-9ab7-4aa3-b35b-6028478cc9e7
+2025-11-14 22:46:59,053 - src.app - INFO - Loaded 3 notes
+2025-11-14 22:46:59,053 - src.app - INFO - Main window initialized
+2025-11-14 22:50:54,861 - __main__ - INFO - Logging initialized
+2025-11-14 22:50:54,862 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-14 22:50:55,067 - __main__ - INFO - Application configured
+2025-11-14 22:50:55,068 - src.core.storage - INFO - Storage directory initialized at /home/kyle/Desktop/smooth-write/notes
+2025-11-14 22:50:55,168 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-14 22:50:55,174 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-14 22:50:55,214 - src.app - INFO - Keyboard shortcuts configured
+2025-11-14 22:50:55,215 - src.core.storage - INFO - Loaded 3 notes
+2025-11-14 22:50:55,217 - src.ui.notes_list - INFO - Notes list updated with 3 notes
+2025-11-14 22:50:55,218 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-14 22:50:55,218 - src.app - INFO - Loaded note: e8a5386d-9ab7-4aa3-b35b-6028478cc9e7
+2025-11-14 22:50:55,218 - src.app - INFO - Loaded 3 notes
+2025-11-14 22:50:55,218 - src.app - INFO - Main window initialized
+2025-11-14 22:50:55,233 - __main__ - INFO - Application started successfully
+2025-11-14 22:51:04,631 - src.core.storage - INFO - Deleted note e8a5386d-9ab7-4aa3-b35b-6028478cc9e7
+2025-11-14 22:51:04,633 - src.app - INFO - Deleted note: e8a5386d-9ab7-4aa3-b35b-6028478cc9e7
+2025-11-14 22:51:08,793 - src.core.storage - INFO - Deleted note bc8ca440-5044-4e84-89aa-9bfa589c82e5
+2025-11-14 22:51:08,795 - src.app - INFO - Deleted note: bc8ca440-5044-4e84-89aa-9bfa589c82e5
+2025-11-14 22:51:11,104 - src.core.storage - INFO - Deleted note 82ddf357-411a-44a7-91fe-55ad211c1beb
+2025-11-14 22:51:11,104 - src.app - INFO - Deleted note: 82ddf357-411a-44a7-91fe-55ad211c1beb

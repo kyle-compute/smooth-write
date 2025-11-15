@@ -16,6 +16,7 @@ from PyQt6.QtGui import QKeySequence, QShortcut, QAction
 
 from .core import Note, StorageManager, AutoSaveManager
 from .ui import RichTextEditor, NotesList, get_stylesheet
+from .ui.animations import animation_manager
 from .helpers import create_welcome_note
 
 logger = logging.getLogger(__name__)
@@ -38,6 +39,7 @@ class MainWindow(QMainWindow):
         self.storage = StorageManager()
         self.current_note: Optional[Note] = None
         self._auto_save_manager: Optional[AutoSaveManager] = None
+        self._is_closing = False  # Flag for smooth close animation
 
         self._setup_window()
         self._setup_ui()
@@ -62,16 +64,16 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(central_widget)
 
         layout = QHBoxLayout(central_widget)
-        layout.setContentsMargins(20, 20, 20, 20)
-        layout.setSpacing(16)
+        layout.setContentsMargins(24, 24, 24, 24)  # More generous margins
+        layout.setSpacing(20)  # Better spacing between elements
 
         # Create splitter for resizable panels
         splitter = QSplitter(Qt.Orientation.Horizontal)
-        splitter.setHandleWidth(2)
+        splitter.setHandleWidth(10)  # Wider handle for easier grabbing
 
         # Notes list sidebar
         self._notes_list = NotesList()
-        self._notes_list.setMinimumWidth(250)
+        self._notes_list.setMinimumWidth(280)  # Wider for better readability
         self._notes_list.setMaximumWidth(400)
         splitter.addWidget(self._notes_list)
 
@@ -261,11 +263,20 @@ class MainWindow(QMainWindow):
                 )
 
     def closeEvent(self, event) -> None:
-        """Handle window close event.
+        """Handle window close event with smooth fade-out animation.
 
         Args:
             event: Close event
         """
+        if self._is_closing:
+            # Animation already in progress, accept the event
+            event.accept()
+            return
+
+        # Start closing process with animation
+        event.ignore()  # Ignore for now, will close after animation
+        self._is_closing = True
+
         # Save current note before closing
         if self.current_note and self._auto_save_manager:
             self._auto_save_manager.save_now()
@@ -275,4 +286,9 @@ class MainWindow(QMainWindow):
             self._auto_save_manager.cleanup()
 
         logger.info("Application closing")
-        event.accept()
+
+        # Fade out and then close
+        def actually_close():
+            self.close()
+
+        animation_manager.fade_out(self, duration=200, on_finished=actually_close)

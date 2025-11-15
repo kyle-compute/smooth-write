@@ -7,7 +7,11 @@
       "Bash(python:*)",
       "Bash(sort:*)",
       "WebSearch",
-      "WebFetch(domain:doc.qt.io)"
+      "WebFetch(domain:doc.qt.io)",
+      "Bash(python3:*)",
+      "Bash(source:*)",
+      "WebFetch(domain:forum.qt.io)",
+      "Bash(timeout 5 python:*)"
     ],
     "deny": [],
     "ask": []

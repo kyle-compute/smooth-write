@@ -9,6 +9,7 @@ from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QPalette, QColor
 
 from .app import MainWindow
+from .ui.animations import animation_manager
 
 
 def setup_logging() -> None:
@@ -66,8 +67,8 @@ def setup_application() -> QApplication:
 
     app.setPalette(palette)
 
-    # Set cursor flash time for smoother appearance (slower blink)
-    app.setCursorFlashTime(1200)
+    # Set cursor flash time for smoother appearance (match Microsoft Word)
+    app.setCursorFlashTime(530)  # ~530ms is standard on Windows
 
     logger = logging.getLogger(__name__)
     logger.info("Application configured")
@@ -91,9 +92,16 @@ def main() -> int:
         # Create application
         app = setup_application()
 
-        # Create and show main window
+        # Create and show main window with smooth fade-in
         window = MainWindow()
+
+        # Set initial window opacity for fade-in animation
+        window.setWindowOpacity(0.0)
+
         window.show()
+
+        # Animate fade in (uses windowOpacity automatically for windows)
+        animation_manager.fade_in(window, duration=300)
 
         logger.info("Application started successfully")
 

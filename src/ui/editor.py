@@ -7,6 +7,8 @@ from PyQt6.QtWidgets import QWidget, QTextEdit, QVBoxLayout
 from PyQt6.QtCore import pyqtSignal, Qt
 from PyQt6.QtGui import QFont
 
+from .animations import animation_manager
+
 try:
     from PyQt6.QtOpenGLWidgets import QOpenGLWidget
     OPENGL_AVAILABLE = True
@@ -49,35 +51,43 @@ class RichTextEditor(QWidget):
         self._editor.setAcceptRichText(True)
         self._editor.setPlaceholderText("Start writing...")
 
-        # OpenGL viewport disabled due to segfault issues on some systems
+        # OpenGL viewport disabled due to segfault issues on this system
+        # Hardware acceleration would be ideal, but software rendering with
+        # optimizations below provides acceptable smoothness
         # if OPENGL_AVAILABLE:
         #     try:
-        #         self._editor.setViewport(QOpenGLWidget())
+        #         gl_widget = QOpenGLWidget()
+        #         self._editor.setViewport(gl_widget)
         #         logger.info("OpenGL viewport enabled for smooth rendering")
         #     except Exception as e:
         #         logger.warning(f"Failed to enable OpenGL viewport: {e}")
 
         # Enable smooth rendering for cursor and text
-        self._editor.setAttribute(Qt.WidgetAttribute.WA_OpaquePaintEvent, False)
+        # Allow Qt to manage background erasure for proper cursor rendering
+        # (WA_OpaquePaintEvent causes cursor ghosting/artifacts)
         self._editor.viewport().setAttribute(
             Qt.WidgetAttribute.WA_OpaquePaintEvent, False
         )
+        # Use default system background handling
+        self._editor.setAttribute(Qt.WidgetAttribute.WA_NoSystemBackground, False)
 
         # Set comfortable font with optimized rendering for smooth cursor
         font = QFont()
         font.setFamily("SF Pro Text")
-        font.setPointSize(16)
-        font.setHintingPreference(QFont.HintingPreference.PreferDefaultHinting)
-        font.setStyleStrategy(QFont.StyleStrategy.PreferDefault)
+        font.setPointSize(18)  # Larger for comfortable reading
+        # Use full hinting and antialiasing for smoother appearance
+        font.setHintingPreference(QFont.HintingPreference.PreferFullHinting)
+        font.setStyleStrategy(QFont.StyleStrategy.PreferAntialias)
         self._editor.setFont(font)
 
         # Set cursor width for better visibility
-        self._editor.setCursorWidth(2)
+        self._editor.setCursorWidth(3)  # Wider cursor for better visibility
 
         # Optimize text document for smooth rendering
         doc = self._editor.document()
-        doc.setUseDesignMetrics(True)
-        doc.setDocumentMargin(4)
+        # Disable design metrics to prevent cursor positioning jitter
+        doc.setUseDesignMetrics(False)
+        doc.setDocumentMargin(10)  # More breathing room around text
 
         # Disable auto-fill background for smoother repaints
         self._editor.setAutoFillBackground(False)
@@ -103,13 +113,22 @@ class RichTextEditor(QWidget):
         """
         return self._editor.toHtml()
 
-    def set_html(self, html: str) -> None:
-        """Set editor content from HTML.
+    def set_html(self, html: str, animate: bool = True) -> None:
+        """Set editor content from HTML with smooth cross-fade animation.
 
         Args:
             html: HTML content to set
+            animate: Whether to animate the transition (default: True)
         """
-        self._editor.setHtml(html)
+        if not animate or not html:
+            self._editor.setHtml(html)
+            return
+
+        # Cross-fade animation
+        def switch_content():
+            self._editor.setHtml(html)
+
+        animation_manager.cross_fade(self._editor, switch_content, duration=200)
 
     def get_plain_text(self) -> str:
         """Get editor content as plain text.

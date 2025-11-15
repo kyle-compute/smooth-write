@@ -176,3 +176,324 @@ AttributeError: type object 'ApplicationAttribute' has no attribute 'AA_UseHighD
 2025-11-14 22:51:08,795 - src.app - INFO - Deleted note: bc8ca440-5044-4e84-89aa-9bfa589c82e5
 2025-11-14 22:51:11,104 - src.core.storage - INFO - Deleted note 82ddf357-411a-44a7-91fe-55ad211c1beb
 2025-11-14 22:51:11,104 - src.app - INFO - Deleted note: 82ddf357-411a-44a7-91fe-55ad211c1beb
+2025-11-15 12:07:29,385 - __main__ - INFO - Logging initialized
+2025-11-15 12:07:29,385 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:07:29,458 - __main__ - INFO - Application configured
+2025-11-15 12:07:29,458 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:07:29,498 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:07:29,500 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:07:29,529 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:07:29,529 - src.core.storage - INFO - Loaded 0 notes
+2025-11-15 12:07:29,530 - src.app - INFO - Created welcome note
+2025-11-15 12:07:29,530 - src.core.storage - INFO - Loaded 1 notes
+2025-11-15 12:07:29,530 - src.ui.notes_list - INFO - Notes list updated with 1 notes
+2025-11-15 12:07:29,530 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:07:29,531 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:07:29,531 - src.app - INFO - Loaded 1 notes
+2025-11-15 12:07:29,531 - src.app - INFO - Main window initialized
+2025-11-15 12:07:29,537 - __main__ - INFO - Application started successfully
+2025-11-15 12:18:17,723 - __main__ - INFO - Logging initialized
+2025-11-15 12:18:17,723 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:18:17,792 - __main__ - INFO - Application configured
+2025-11-15 12:18:17,793 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:18:17,829 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:18:17,831 - src.ui.editor - INFO - OpenGL viewport enabled for smooth rendering
+2025-11-15 12:18:17,831 - __main__ - ERROR - Fatal error: type object 'HintingPreference' has no attribute 'PreferQuality'
+Traceback (most recent call last):
+  File "/home/tax/Desktop/smooth-write/src/main.py", line 95, in main
+    window = MainWindow()
+             ^^^^^^^^^^^^
+  File "/home/tax/Desktop/smooth-write/src/app.py", line 43, in __init__
+    self._setup_ui()
+  File "/home/tax/Desktop/smooth-write/src/app.py", line 79, in _setup_ui
+    self._editor = RichTextEditor()
+                   ^^^^^^^^^^^^^^^^
+  File "/home/tax/Desktop/smooth-write/src/ui/editor.py", line 37, in __init__
+    self._setup_ui()
+  File "/home/tax/Desktop/smooth-write/src/ui/editor.py", line 75, in _setup_ui
+    font.setHintingPreference(QFont.HintingPreference.PreferQuality)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'HintingPreference' has no attribute 'PreferQuality'
+2025-11-15 12:18:22,761 - __main__ - INFO - Logging initialized
+2025-11-15 12:18:22,761 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:18:22,836 - __main__ - INFO - Application configured
+2025-11-15 12:18:22,836 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:18:22,872 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:18:22,875 - src.ui.editor - INFO - OpenGL viewport enabled for smooth rendering
+2025-11-15 12:18:22,875 - __main__ - ERROR - Fatal error: type object 'HintingPreference' has no attribute 'PreferQuality'
+Traceback (most recent call last):
+  File "/home/tax/Desktop/smooth-write/src/main.py", line 95, in main
+    window = MainWindow()
+             ^^^^^^^^^^^^
+  File "/home/tax/Desktop/smooth-write/src/app.py", line 43, in __init__
+    self._setup_ui()
+  File "/home/tax/Desktop/smooth-write/src/app.py", line 79, in _setup_ui
+    self._editor = RichTextEditor()
+                   ^^^^^^^^^^^^^^^^
+  File "/home/tax/Desktop/smooth-write/src/ui/editor.py", line 37, in __init__
+    self._setup_ui()
+  File "/home/tax/Desktop/smooth-write/src/ui/editor.py", line 75, in _setup_ui
+    font.setHintingPreference(QFont.HintingPreference.PreferQuality)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'HintingPreference' has no attribute 'PreferQuality'
+2025-11-15 12:18:45,818 - __main__ - INFO - Logging initialized
+2025-11-15 12:18:45,818 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:18:45,894 - __main__ - INFO - Application configured
+2025-11-15 12:18:45,894 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:18:45,930 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:18:45,933 - src.ui.editor - INFO - OpenGL viewport enabled for smooth rendering
+2025-11-15 12:18:45,933 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:18:45,963 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:18:45,963 - src.core.storage - INFO - Loaded 1 notes
+2025-11-15 12:18:45,964 - src.ui.notes_list - INFO - Notes list updated with 1 notes
+2025-11-15 12:18:45,964 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:18:45,964 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:18:45,964 - src.app - INFO - Loaded 1 notes
+2025-11-15 12:18:45,964 - src.app - INFO - Main window initialized
+2025-11-15 12:19:17,233 - __main__ - INFO - Logging initialized
+2025-11-15 12:19:17,233 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:19:17,312 - __main__ - INFO - Application configured
+2025-11-15 12:19:17,312 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:19:17,351 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:19:17,353 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:19:17,384 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:19:17,384 - src.core.storage - INFO - Loaded 1 notes
+2025-11-15 12:19:17,385 - src.ui.notes_list - INFO - Notes list updated with 1 notes
+2025-11-15 12:19:17,385 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:19:17,385 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:19:17,385 - src.app - INFO - Loaded 1 notes
+2025-11-15 12:19:17,385 - src.app - INFO - Main window initialized
+2025-11-15 12:19:17,390 - __main__ - INFO - Application started successfully
+2025-11-15 12:20:34,884 - __main__ - INFO - Logging initialized
+2025-11-15 12:20:34,884 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:20:34,956 - __main__ - INFO - Application configured
+2025-11-15 12:20:34,956 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:20:34,993 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:20:34,995 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:20:35,026 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:20:35,026 - src.core.storage - INFO - Loaded 1 notes
+2025-11-15 12:20:35,026 - src.ui.notes_list - INFO - Notes list updated with 1 notes
+2025-11-15 12:20:35,026 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:20:35,026 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:20:35,026 - src.app - INFO - Loaded 1 notes
+2025-11-15 12:20:35,026 - src.app - INFO - Main window initialized
+2025-11-15 12:20:35,031 - __main__ - INFO - Application started successfully
+2025-11-15 12:26:40,115 - __main__ - INFO - Logging initialized
+2025-11-15 12:26:40,115 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:26:40,194 - __main__ - INFO - Application configured
+2025-11-15 12:26:40,194 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:26:40,233 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:26:40,235 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:26:40,265 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:26:40,266 - src.core.storage - INFO - Loaded 1 notes
+2025-11-15 12:26:40,266 - src.ui.notes_list - INFO - Notes list updated with 1 notes
+2025-11-15 12:26:40,266 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:26:40,266 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:26:40,266 - src.app - INFO - Loaded 1 notes
+2025-11-15 12:26:40,266 - src.app - INFO - Main window initialized
+2025-11-15 12:26:40,271 - __main__ - INFO - Application started successfully
+2025-11-15 12:27:34,611 - src.app - INFO - Application closing
+2025-11-15 12:27:39,088 - __main__ - INFO - Logging initialized
+2025-11-15 12:27:39,088 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:27:39,162 - __main__ - INFO - Application configured
+2025-11-15 12:27:39,162 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:27:39,199 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:27:39,200 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:27:39,230 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:27:39,230 - src.core.storage - INFO - Loaded 1 notes
+2025-11-15 12:27:39,231 - src.ui.notes_list - INFO - Notes list updated with 1 notes
+2025-11-15 12:27:39,231 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:27:39,231 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:27:39,231 - src.app - INFO - Loaded 1 notes
+2025-11-15 12:27:39,231 - src.app - INFO - Main window initialized
+2025-11-15 12:27:39,236 - __main__ - INFO - Application started successfully
+2025-11-15 12:35:55,138 - __main__ - INFO - Logging initialized
+2025-11-15 12:35:55,138 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:35:55,214 - __main__ - INFO - Application configured
+2025-11-15 12:35:55,214 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:35:55,252 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:35:55,254 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:35:55,284 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:35:55,284 - src.core.storage - INFO - Loaded 1 notes
+2025-11-15 12:35:55,285 - src.ui.notes_list - INFO - Notes list updated with 1 notes
+2025-11-15 12:35:55,285 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:35:55,285 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:35:55,285 - src.app - INFO - Loaded 1 notes
+2025-11-15 12:35:55,285 - src.app - INFO - Main window initialized
+2025-11-15 12:35:55,291 - __main__ - INFO - Application started successfully
+2025-11-15 12:36:53,720 - src.app - INFO - Application closing
+2025-11-15 12:36:56,400 - __main__ - INFO - Logging initialized
+2025-11-15 12:36:56,400 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:36:56,473 - __main__ - INFO - Application configured
+2025-11-15 12:36:56,474 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:36:56,510 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:36:56,511 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:36:56,541 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:36:56,541 - src.core.storage - INFO - Loaded 1 notes
+2025-11-15 12:36:56,541 - src.ui.notes_list - INFO - Notes list updated with 1 notes
+2025-11-15 12:36:56,542 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:36:56,542 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:36:56,542 - src.app - INFO - Loaded 1 notes
+2025-11-15 12:36:56,542 - src.app - INFO - Main window initialized
+2025-11-15 12:36:56,546 - __main__ - INFO - Application started successfully
+2025-11-15 12:37:03,027 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:37:03,027 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:37:03,869 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:37:03,869 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:37:04,272 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:37:04,272 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:37:04,646 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:37:04,646 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:37:05,025 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:37:05,025 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:37:06,134 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:37:06,134 - src.app - INFO - Loaded note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:37:07,137 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:37:07,137 - src.app - INFO - Loaded note: ff5e38b4-cf15-4fc1-8dcc-9d3cccb4b323
+2025-11-15 12:37:07,137 - src.app - INFO - Created new note: ff5e38b4-cf15-4fc1-8dcc-9d3cccb4b323
+2025-11-15 12:38:38,939 - src.app - INFO - Application closing
+2025-11-15 12:46:34,894 - __main__ - INFO - Logging initialized
+2025-11-15 12:46:34,894 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:46:34,966 - __main__ - INFO - Application configured
+2025-11-15 12:46:34,966 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:46:35,002 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:46:35,004 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:46:35,034 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:46:35,034 - src.core.storage - INFO - Loaded 2 notes
+2025-11-15 12:46:35,034 - src.ui.notes_list - INFO - Notes list updated with 2 notes
+2025-11-15 12:46:35,035 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:46:35,035 - src.app - INFO - Loaded note: ff5e38b4-cf15-4fc1-8dcc-9d3cccb4b323
+2025-11-15 12:46:35,035 - src.app - INFO - Loaded 2 notes
+2025-11-15 12:46:35,035 - src.app - INFO - Main window initialized
+2025-11-15 12:46:35,039 - __main__ - INFO - Application started successfully
+2025-11-15 12:47:46,766 - __main__ - INFO - Logging initialized
+2025-11-15 12:47:46,766 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:47:46,837 - __main__ - INFO - Application configured
+2025-11-15 12:47:46,837 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:47:46,873 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:47:46,875 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:47:46,903 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:47:46,903 - src.core.storage - INFO - Loaded 2 notes
+2025-11-15 12:47:46,904 - src.ui.notes_list - INFO - Notes list updated with 2 notes
+2025-11-15 12:47:46,904 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:47:46,904 - src.app - INFO - Loaded note: ff5e38b4-cf15-4fc1-8dcc-9d3cccb4b323
+2025-11-15 12:47:46,904 - src.app - INFO - Loaded 2 notes
+2025-11-15 12:47:46,904 - src.app - INFO - Main window initialized
+2025-11-15 12:47:46,907 - __main__ - INFO - Application started successfully
+2025-11-15 12:50:37,705 - __main__ - INFO - Logging initialized
+2025-11-15 12:50:37,705 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:50:37,780 - __main__ - INFO - Application configured
+2025-11-15 12:50:37,781 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:50:37,817 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:50:37,819 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:50:37,848 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:50:37,849 - src.core.storage - INFO - Loaded 2 notes
+2025-11-15 12:50:37,849 - src.ui.notes_list - INFO - Notes list updated with 2 notes
+2025-11-15 12:50:37,849 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:50:37,850 - src.app - INFO - Loaded note: ff5e38b4-cf15-4fc1-8dcc-9d3cccb4b323
+2025-11-15 12:50:37,850 - src.app - INFO - Loaded 2 notes
+2025-11-15 12:50:37,850 - src.app - INFO - Main window initialized
+2025-11-15 12:50:37,853 - __main__ - INFO - Application started successfully
+2025-11-15 12:51:27,964 - __main__ - INFO - Logging initialized
+2025-11-15 12:51:27,964 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:51:28,044 - __main__ - INFO - Application configured
+2025-11-15 12:51:28,045 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:51:28,082 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:51:28,083 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:51:28,114 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:51:28,114 - src.core.storage - INFO - Loaded 2 notes
+2025-11-15 12:51:28,115 - src.ui.notes_list - INFO - Notes list updated with 2 notes
+2025-11-15 12:51:28,115 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:51:28,115 - src.app - INFO - Loaded note: ff5e38b4-cf15-4fc1-8dcc-9d3cccb4b323
+2025-11-15 12:51:28,115 - src.app - INFO - Loaded 2 notes
+2025-11-15 12:51:28,115 - src.app - INFO - Main window initialized
+2025-11-15 12:51:28,118 - __main__ - INFO - Application started successfully
+2025-11-15 12:52:16,268 - __main__ - INFO - Logging initialized
+2025-11-15 12:52:16,268 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:52:16,344 - __main__ - INFO - Application configured
+2025-11-15 12:52:16,344 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:52:16,381 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:52:16,383 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:52:16,412 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:52:16,412 - src.core.storage - INFO - Loaded 2 notes
+2025-11-15 12:52:16,412 - src.ui.notes_list - INFO - Notes list updated with 2 notes
+2025-11-15 12:52:16,413 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:52:16,413 - src.app - INFO - Loaded note: ff5e38b4-cf15-4fc1-8dcc-9d3cccb4b323
+2025-11-15 12:52:16,413 - src.app - INFO - Loaded 2 notes
+2025-11-15 12:52:16,413 - src.app - INFO - Main window initialized
+2025-11-15 12:52:16,416 - __main__ - INFO - Application started successfully
+2025-11-15 12:52:20,337 - src.core.storage - INFO - Deleted note ff5e38b4-cf15-4fc1-8dcc-9d3cccb4b323
+2025-11-15 12:52:20,338 - src.app - INFO - Deleted note: ff5e38b4-cf15-4fc1-8dcc-9d3cccb4b323
+2025-11-15 12:52:21,803 - src.core.storage - INFO - Deleted note 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:52:21,803 - src.app - INFO - Deleted note: 6ec3fea9-9180-4193-b41c-62bf910f4724
+2025-11-15 12:52:23,644 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:52:23,644 - src.app - INFO - Loaded note: 940fa279-b66a-4285-b28a-aad6003d79e7
+2025-11-15 12:52:23,645 - src.app - INFO - Created new note: 940fa279-b66a-4285-b28a-aad6003d79e7
+2025-11-15 12:52:24,229 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:52:24,230 - src.app - INFO - Loaded note: 0a6fdc02-687f-4db7-afeb-7e00c646a105
+2025-11-15 12:52:24,230 - src.app - INFO - Created new note: 0a6fdc02-687f-4db7-afeb-7e00c646a105
+2025-11-15 12:52:24,393 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:52:24,393 - src.app - INFO - Loaded note: b55e9e75-12e7-4309-bb59-6168f36ef55d
+2025-11-15 12:52:24,394 - src.app - INFO - Created new note: b55e9e75-12e7-4309-bb59-6168f36ef55d
+2025-11-15 12:56:12,715 - src.app - INFO - Application closing
+2025-11-15 12:59:02,538 - __main__ - INFO - Logging initialized
+2025-11-15 12:59:02,538 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 12:59:02,613 - __main__ - INFO - Application configured
+2025-11-15 12:59:02,613 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 12:59:02,650 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 12:59:02,652 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 12:59:02,681 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 12:59:02,682 - src.core.storage - INFO - Loaded 3 notes
+2025-11-15 12:59:02,682 - src.ui.notes_list - INFO - Notes list updated with 3 notes
+2025-11-15 12:59:02,683 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 12:59:02,683 - src.app - INFO - Loaded note: b55e9e75-12e7-4309-bb59-6168f36ef55d
+2025-11-15 12:59:02,683 - src.app - INFO - Loaded 3 notes
+2025-11-15 12:59:02,683 - src.app - INFO - Main window initialized
+2025-11-15 12:59:02,686 - __main__ - INFO - Application started successfully
+2025-11-15 12:59:14,158 - src.core.storage - INFO - Deleted note b55e9e75-12e7-4309-bb59-6168f36ef55d
+2025-11-15 12:59:14,159 - src.app - INFO - Deleted note: b55e9e75-12e7-4309-bb59-6168f36ef55d
+2025-11-15 12:59:16,304 - src.core.storage - INFO - Deleted note 0a6fdc02-687f-4db7-afeb-7e00c646a105
+2025-11-15 12:59:16,304 - src.app - INFO - Deleted note: 0a6fdc02-687f-4db7-afeb-7e00c646a105
+2025-11-15 12:59:17,695 - src.core.storage - INFO - Deleted note 940fa279-b66a-4285-b28a-aad6003d79e7
+2025-11-15 12:59:17,695 - src.app - INFO - Deleted note: 940fa279-b66a-4285-b28a-aad6003d79e7
+2025-11-15 13:03:12,987 - __main__ - INFO - Logging initialized
+2025-11-15 13:03:12,987 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 13:03:13,063 - __main__ - INFO - Application configured
+2025-11-15 13:03:13,063 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 13:03:13,100 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 13:03:13,102 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 13:03:13,131 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 13:03:13,131 - src.core.storage - INFO - Loaded 0 notes
+2025-11-15 13:03:13,132 - src.app - INFO - Created welcome note
+2025-11-15 13:03:13,132 - src.core.storage - INFO - Loaded 1 notes
+2025-11-15 13:03:13,132 - src.ui.notes_list - INFO - Notes list updated with 1 notes
+2025-11-15 13:03:13,133 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 13:03:13,133 - src.app - INFO - Loaded note: ca39d13d-3044-4089-86b6-880821e83fc8
+2025-11-15 13:03:13,133 - src.app - INFO - Loaded 1 notes
+2025-11-15 13:03:13,133 - src.app - INFO - Main window initialized
+2025-11-15 13:03:13,136 - __main__ - INFO - Application started successfully
+2025-11-15 13:04:23,440 - src.app - INFO - Application closing
+2025-11-15 13:04:33,227 - __main__ - INFO - Logging initialized
+2025-11-15 13:04:33,227 - __main__ - INFO - Starting Smooth Write v0.1.0
+2025-11-15 13:04:33,302 - __main__ - INFO - Application configured
+2025-11-15 13:04:33,303 - src.core.storage - INFO - Storage directory initialized at /home/tax/Desktop/smooth-write/notes
+2025-11-15 13:04:33,338 - src.ui.notes_list - INFO - Notes list initialized
+2025-11-15 13:04:33,340 - src.ui.editor - INFO - Rich text editor initialized
+2025-11-15 13:04:33,370 - src.app - INFO - Keyboard shortcuts configured
+2025-11-15 13:04:33,370 - src.core.storage - INFO - Loaded 1 notes
+2025-11-15 13:04:33,370 - src.ui.notes_list - INFO - Notes list updated with 1 notes
+2025-11-15 13:04:33,371 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 13:04:33,371 - src.app - INFO - Loaded note: ca39d13d-3044-4089-86b6-880821e83fc8
+2025-11-15 13:04:33,371 - src.app - INFO - Loaded 1 notes
+2025-11-15 13:04:33,371 - src.app - INFO - Main window initialized
+2025-11-15 13:04:33,374 - __main__ - INFO - Application started successfully
+2025-11-15 13:04:37,369 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 13:04:37,369 - src.app - INFO - Loaded note: fc816f81-086d-46a2-9445-4e9f213f1f5f
+2025-11-15 13:04:37,369 - src.app - INFO - Created new note: fc816f81-086d-46a2-9445-4e9f213f1f5f
+2025-11-15 13:04:39,402 - src.core.storage - INFO - Deleted note fc816f81-086d-46a2-9445-4e9f213f1f5f
+2025-11-15 13:04:39,403 - src.app - INFO - Deleted note: fc816f81-086d-46a2-9445-4e9f213f1f5f
+2025-11-15 13:04:39,941 - src.core.auto_save - INFO - Auto-save initialized with 1000ms delay
+2025-11-15 13:04:39,941 - src.app - INFO - Loaded note: ca39d13d-3044-4089-86b6-880821e83fc8
+2025-11-15 13:04:41,228 - src.core.storage - INFO - Deleted note ca39d13d-3044-4089-86b6-880821e83fc8
+2025-11-15 13:04:41,228 - src.app - INFO - Deleted note: ca39d13d-3044-4089-86b6-880821e83fc8
+2025-11-15 13:04:42,709 - src.app - INFO - Application closing

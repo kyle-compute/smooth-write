@@ -15,7 +15,7 @@ from PyQt6.QtWidgets import (
     QMenu,
 )
 from PyQt6.QtCore import pyqtSignal, Qt
-from PyQt6.QtGui import QFont, QAction
+from PyQt6.QtGui import QFont, QAction, QTextDocument
 
 from ..core.note import Note
 from .note_list_item import NoteListItem
@@ -54,26 +54,26 @@ class NotesList(QWidget):
     def _setup_ui(self) -> None:
         """Set up the user interface."""
         layout = QVBoxLayout(self)
-        layout.setContentsMargins(12, 12, 12, 12)
-        layout.setSpacing(12)
+        layout.setContentsMargins(20, 20, 20, 20)  # More breathing room
+        layout.setSpacing(16)  # Better vertical spacing
 
         # Header with title and new note button
         header_layout = QHBoxLayout()
-        header_layout.setSpacing(8)
+        header_layout.setSpacing(12)
 
-        title_label = QLabel("Notes")
+        self._title_label = QLabel("Notes")
         title_font = QFont()
-        title_font.setPointSize(18)
-        title_font.setBold(True)
-        title_label.setFont(title_font)
-        header_layout.addWidget(title_label)
+        title_font.setPointSize(22)  # Larger, more prominent
+        title_font.setWeight(QFont.Weight.DemiBold)  # Semibold for elegance
+        self._title_label.setFont(title_font)
+        header_layout.addWidget(self._title_label)
 
         header_layout.addStretch()
 
         new_note_btn = QPushButton("+")
         new_note_btn.setToolTip("New Note (Ctrl+N)")
-        new_note_btn.setMaximumWidth(36)
-        new_note_btn.setMaximumHeight(36)
+        new_note_btn.setMaximumWidth(44)  # Larger touch target
+        new_note_btn.setMaximumHeight(44)  # Larger touch target
         new_note_btn.clicked.connect(self.new_note_requested.emit)
         new_note_btn.setProperty("primary", True)
         header_layout.addWidget(new_note_btn)
@@ -88,11 +88,22 @@ class NotesList(QWidget):
 
         # Notes list
         self._list_widget = QListWidget()
-        self._list_widget.setSpacing(2)
+        self._list_widget.setSpacing(6)  # Better item separation
         self._list_widget.setContextMenuPolicy(
             Qt.ContextMenuPolicy.CustomContextMenu
         )
         layout.addWidget(self._list_widget)
+
+        # Empty state label
+        self._empty_label = QLabel()
+        self._empty_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self._empty_label.setWordWrap(True)
+        empty_font = QFont()
+        empty_font.setPointSize(14)
+        self._empty_label.setFont(empty_font)
+        self._empty_label.setProperty("tertiary", True)
+        self._empty_label.hide()
+        layout.addWidget(self._empty_label)
 
     def _connect_signals(self) -> None:
         """Connect internal signals."""
@@ -123,11 +134,53 @@ class NotesList(QWidget):
         for i in range(self._list_widget.count()):
             item = self._list_widget.item(i)
             if isinstance(item, NoteListItem):
+                # Convert HTML content to plain text for accurate searching
+                doc = QTextDocument()
+                doc.setHtml(item.note.content)
+                plain_content = doc.toPlainText()
+
                 matches = (
                     query in item.note.title.lower() or
-                    query in item.note.content.lower()
+                    query in plain_content.lower()
                 )
                 item.setHidden(not matches if query else False)
+
+        self._update_title()
+        self._update_empty_state()
+
+    def _update_title(self) -> None:
+        """Update title with note count - minimal and tasteful."""
+        total = len(self._notes)
+        visible = sum(1 for i in range(self._list_widget.count())
+                     if not self._list_widget.item(i).isHidden())
+
+        if self._search_box.text().strip():
+            # During search: "X of Y"
+            self._title_label.setText(f"{visible} of {total}")
+        else:
+            # Normal: "X notes" or just "Notes" if empty
+            self._title_label.setText(f"{total} notes" if total > 0 else "Notes")
+
+    def _update_empty_state(self) -> None:
+        """Update empty state visibility and message."""
+        total = len(self._notes)
+        visible = sum(1 for i in range(self._list_widget.count())
+                     if not self._list_widget.item(i).isHidden())
+
+        if total == 0:
+            # No notes at all
+            self._empty_label.setText("No notes yet.\nClick + to create your first note")
+            self._empty_label.show()
+            self._list_widget.hide()
+        elif visible == 0 and self._search_box.text().strip():
+            # Search with no results
+            self._empty_label.setText("No notes found")
+            self._empty_label.show()
+            self._list_widget.hide()
+        else:
+            # Has visible notes
+            self._empty_label.hide()
+            self._list_widget.show()
 
     def _show_context_menu(self, position) -> None:
         """Show context menu for note operations.
@@ -159,6 +212,7 @@ class NotesList(QWidget):
         """
         self._notes = notes
         self._refresh_list()
+        self._update_title()
         logger.info(f"Notes list updated with {len(notes)} notes")
 
     def add_note(self, note: Note) -> None:
@@ -170,6 +224,7 @@ class NotesList(QWidget):
         self._notes.insert(0, note)
         item = NoteListItem(note)
         self._list_widget.insertItem(0, item)
+        self._update_title()
         logger.debug(f"Note added to list: {note.id}")
 
     def update_note(self, note: Note) -> None:
@@ -202,6 +257,8 @@ class NotesList(QWidget):
                 logger.debug(f"Note removed from list: {note_id}")
                 break
 
+        self._update_title()
+
     def select_note(self, note_id: str) -> None:
         """Select a note by ID.
 
@@ -232,6 +289,7 @@ class NotesList(QWidget):
         for note in self._notes:
             item = NoteListItem(note)
             self._list_widget.addItem(item)
+        self._update_empty_state()
 
     def clear_search(self) -> None:
         """Clear the search box."""
